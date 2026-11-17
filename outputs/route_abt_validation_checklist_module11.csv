@@ -1,0 +1,7 @@
+check,result,status,notes
+Missing ABT cells (all columns),25,Documented,"Missing values were reviewed. Some destination lookup fields are missing, and missing analytic values are documented rather than silently removed."
+Nonpositive flight counts,0,Pass,Every route should contain at least one flight.
+Routes with a negative max_arr_delay,4,Documented,"Negative maximum arrival delay can be valid when every recorded flight on a route arrived early, especially for routes with few flights."
+Missing target values (avg_arr_delay),1,Documented,avg_arr_delay is calculated only from flights with recorded arrival-delay values because Pandas mean skips missing values.
+ABT columns without a dictionary row,0,Pass,Every ABT column should have a corresponding row in the data dictionary.
+Blank data dictionary cells,0,Pass,Required documentation fields should be completed before handoff.
